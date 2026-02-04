@@ -1,206 +1,195 @@
-<mxfile host="app.diagrams.net" modified="2026-02-04T00:00:00.000Z" agent="ChatGPT" version="22.1.0">
-  <diagram id="c4" name="C4 Containers - Future 2.0">
-    <mxGraphModel dx="1660" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- Cloud boundary -->
-        <mxCell id="cloud" value="Облачная платформа (мульти-доменная)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="240" y="40" width="1640" height="980" as="geometry"/>
-        </mxCell>
-
-        <!-- People -->
-        <mxCell id="p_biz" value="Бизнес-пользователь&#10;Self-service отчёты" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="20" y="120" width="180" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="p_de" value="Data Engineer&#10;Пайплайны/витрины" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="20" y="240" width="180" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="p_ibo" value="ИБ/Compliance&#10;Доступ/аудит" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="20" y="360" width="180" height="80" as="geometry"/>
-        </mxCell>
-
-        <!-- Core platform containers -->
-        <mxCell id="portal" value="Портал самообслуживания&#10;(Витрина данных)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="cloud">
-          <mxGeometry x="40" y="60" width="320" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="catalog" value="Data Catalog &amp; Governance&#10;Каталог, lineage, политики" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="cloud">
-          <mxGeometry x="400" y="60" width="320" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="iam" value="IAM / SSO&#10;RBAC/ABAC, MFA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="cloud">
-          <mxGeometry x="760" y="60" width="280" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="audit" value="Audit &amp; Logging&#10;Неизменяемый аудит" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="1080" y="60" width="300" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="bi" value="BI / Конструктор отчётов&#10;Ad-hoc, дашборды" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="cloud">
-          <mxGeometry x="40" y="190" width="320" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="semantic" value="Semantic / Metric Layer&#10;Единые метрики KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="400" y="190" width="320" height="90" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="lakehouse" value="Enterprise Data Lakehouse&#10;RAW / CURATED / VITRINES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="cloud">
-          <mxGeometry x="760" y="190" width="620" height="110" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="orchestrator" value="ETL/Orchestration&#10;ELT, расписание, CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="cloud">
-          <mxGeometry x="40" y="340" width="320" height="100" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="dq" value="Data Quality&#10;Проверки, SLA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="cloud">
-          <mxGeometry x="400" y="340" width="320" height="100" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="bus" value="Event Bus / Streaming&#10;pub/sub" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="cloud">
-          <mxGeometry x="760" y="340" width="360" height="100" as="geometry"/>
-        </mxCell>
-
-        <!-- Domain areas -->
-        <mxCell id="dom_fin" value="Домен: Финтех/Банк" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="cloud">
-          <mxGeometry x="40" y="500" width="520" height="200" as="geometry"/>
-        </mxCell>
-        <mxCell id="fin_core" value="Core Banking / Fintech Services&#10;(Java/Golang)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="cloud">
-          <mxGeometry x="60" y="540" width="240" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="fin_dp" value="Fintech Data Product&#10;Доменные витрины" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="cloud">
-          <mxGeometry x="320" y="540" width="220" height="70" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="dom_clinic" value="Домен: Клиники" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="600" y="500" width="620" height="200" as="geometry"/>
-        </mxCell>
-        <mxCell id="legacy_dwh" value="Legacy DWH&#10;SQL Server 2008" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="620" y="540" width="220" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="powerbuilder" value="PowerBuilder UI&#10;Операции клиники" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="860" y="540" width="200" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="clinic_dp" value="Clinic Ops Data Product&#10;(без медкарт/историй/исслед.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="cloud">
-          <mxGeometry x="1080" y="540" width="220" height="70" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="dom_ai" value="Домен: AI-сервисы" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#d6b656;" vertex="1" parent="cloud">
-          <mxGeometry x="40" y="730" width="520" height="200" as="geometry"/>
-        </mxCell>
-        <mxCell id="ai_services" value="AI Services&#10;(Python)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="cloud">
-          <mxGeometry x="60" y="770" width="240" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="ai_dp" value="AI Ops Data Product&#10;Опер. метрики (агрег.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="cloud">
-          <mxGeometry x="320" y="770" width="220" height="70" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="dom_corp" value="Домен: Головной офис" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="cloud">
-          <mxGeometry x="600" y="730" width="620" height="200" as="geometry"/>
-        </mxCell>
-        <mxCell id="hr" value="HR/ERP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="cloud">
-          <mxGeometry x="620" y="770" width="180" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="inv" value="Inventory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="cloud">
-          <mxGeometry x="820" y="770" width="180" height="70" as="geometry"/>
-        </mxCell>
-        <mxCell id="corp_dp" value="Corporate Data Product&#10;Фин. отчётность, KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="cloud">
-          <mxGeometry x="1020" y="770" width="240" height="70" as="geometry"/>
-        </mxCell>
-
-        <!-- Edges with geometry (so arrows show) -->
-        <!-- People to portal -->
-        <mxCell id="e1" value="HTTPS/SSO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="p_biz" target="portal">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e2" value="SSO (OIDC/SAML)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="portal" target="iam">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e3" value="Поиск/описания, lineage" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="portal" target="catalog">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e4" value="Открыть отчёты" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="portal" target="bi">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e5" value="Метрики/семантика" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="bi" target="semantic">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e6" value="Запросы к витринам" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="semantic" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e7" value="ELT/Batch/CDC" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="orchestrator" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e8" value="Проверки качества" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="orchestrator" target="dq">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e9" value="Статус качества/SLA" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="dq" target="catalog">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e10" value="Логи действий/выгрузок" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="portal" target="audit">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e11" value="Контроль/отчёты аудита" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="p_ibo" target="audit">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e12" value="Регистрация датасетов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="p_de" target="orchestrator">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Domain integrations -->
-        <mxCell id="e13" value="События (транзакции/счета)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="fin_core" target="bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e14" value="Витрины домена" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="fin_dp" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e15" value="CDC/Batch (миграция)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="legacy_dwh" target="orchestrator">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e16" value="Витрины клиник (без медданных)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="clinic_dp" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e17" value="Опер. события/метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="ai_services" target="bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e18" value="Агрегаты AI" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="ai_dp" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e19" value="HR данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="hr" target="orchestrator">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e20" value="Инвентарь" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="inv" target="orchestrator">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e21" value="Корп. витрины" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="corp_dp" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e22" value="Стриминг ingestion (RAW)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" edge="1" parent="cloud" source="bus" target="lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="c4" name="C4 Containers - Future 2.0">
+        <mxGraphModel dx="2678" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="cloud" value="Облачная платформа (мульти-доменная)" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="40" width="1640" height="980" as="geometry"/>
+                </mxCell>
+                <mxCell id="portal" value="Портал самообслуживания&#10;(Витрина данных)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="cloud" vertex="1">
+                    <mxGeometry x="40" y="60" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="catalog" value="Data Catalog &amp; Governance&#10;Каталог, lineage, политики" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="cloud" vertex="1">
+                    <mxGeometry x="400" y="60" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="iam" value="IAM / SSO&#10;RBAC/ABAC, MFA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="cloud" vertex="1">
+                    <mxGeometry x="760" y="60" width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit" value="Audit &amp; Logging&#10;Неизменяемый аудит" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="1080" y="60" width="300" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="bi" value="BI / Конструктор отчётов&#10;Ad-hoc, дашборды" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="cloud" vertex="1">
+                    <mxGeometry x="40" y="190" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="semantic" value="Semantic / Metric Layer&#10;Единые метрики KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="400" y="190" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="lakehouse" value="Enterprise Data Lakehouse&#10;RAW / CURATED / VITRINES" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="cloud" vertex="1">
+                    <mxGeometry x="760" y="190" width="620" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="orchestrator" value="ETL/Orchestration&#10;ELT, расписание, CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="cloud" vertex="1">
+                    <mxGeometry x="40" y="340" width="320" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dq" value="Data Quality&#10;Проверки, SLA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="cloud" vertex="1">
+                    <mxGeometry x="400" y="340" width="320" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="bus" value="Event Bus / Streaming&#10;pub/sub" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="cloud" vertex="1">
+                    <mxGeometry x="760" y="340" width="360" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_fin" value="Домен: Финтех/Банк" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#6c8ebf;" parent="cloud" vertex="1">
+                    <mxGeometry x="40" y="500" width="520" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_core" value="Core Banking / Fintech Services&#10;(Java/Golang)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="cloud" vertex="1">
+                    <mxGeometry x="60" y="540" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_dp" value="Fintech Data Product&#10;Доменные витрины" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="cloud" vertex="1">
+                    <mxGeometry x="320" y="540" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_clinic" value="Домен: Клиники" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="600" y="500" width="620" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="legacy_dwh" value="Legacy DWH&#10;SQL Server 2008" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="620" y="540" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="powerbuilder" value="PowerBuilder UI&#10;Операции клиники" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="860" y="540" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="clinic_dp" value="Clinic Ops Data Product&#10;(без медкарт/историй/исслед.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="cloud" vertex="1">
+                    <mxGeometry x="1080" y="540" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_ai" value="Домен: AI-сервисы" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#d6b656;" parent="cloud" vertex="1">
+                    <mxGeometry x="40" y="730" width="520" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai_services" value="AI Services&#10;(Python)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="cloud" vertex="1">
+                    <mxGeometry x="60" y="770" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="ai_dp" value="AI Ops Data Product&#10;Опер. метрики (агрег.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="cloud" vertex="1">
+                    <mxGeometry x="320" y="770" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dom_corp" value="Домен: Головной офис" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#ffffff;strokeColor=#82b366;" parent="cloud" vertex="1">
+                    <mxGeometry x="600" y="730" width="620" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="hr" value="HR/ERP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cloud" vertex="1">
+                    <mxGeometry x="620" y="770" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="inv" value="Inventory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cloud" vertex="1">
+                    <mxGeometry x="820" y="770" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="corp_dp" value="Corporate Data Product&#10;Фин. отчётность, KPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="cloud" vertex="1">
+                    <mxGeometry x="1020" y="770" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" value="SSO (OIDC/SAML)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="portal" target="iam" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="Поиск/описания, lineage" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="portal" target="catalog" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" value="Открыть отчёты" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="portal" target="bi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" value="Метрики/семантика" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="bi" target="semantic" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" value="Запросы к витринам" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="semantic" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="ELT/Batch/CDC" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="orchestrator" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" value="Проверки качества" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="orchestrator" target="dq" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" value="Статус качества/SLA" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="dq" target="catalog" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" value="Логи действий/выгрузок" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="portal" target="audit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e13" value="События (транзакции/счета)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="fin_core" target="bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e14" value="Витрины домена" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="fin_dp" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e15" value="CDC/Batch (миграция)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="legacy_dwh" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e16" value="Витрины клиник (без медданных)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="clinic_dp" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e17" value="Опер. события/метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="ai_services" target="bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e18" value="Агрегаты AI" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="ai_dp" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e19" value="HR данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="hr" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e20" value="Инвентарь" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="inv" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e21" value="Корп. витрины" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="corp_dp" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e22" value="Стриминг ingestion (RAW)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="cloud" source="bus" target="lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_biz" value="Бизнес-пользователь&#10;Self-service отчёты" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry y="105" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_de" value="Data Engineer&#10;Пайплайны/витрины" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="-20" y="240" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="p_ibo" value="ИБ/Compliance&#10;Доступ/аудит" style="shape=mxgraph.c4.person;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="360" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="HTTPS/SSO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="p_biz" target="portal" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="Контроль/отчёты аудита" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="1" source="p_ibo" target="audit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" value="Регистрация датасетов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;" parent="1" source="p_de" target="orchestrator" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <!-- Business Scenario Annotations -->
+                <mxCell id="scenario1" value="🚀 Быстрая подготовка отчётности&#10;Портал → BI → Semantic → Lakehouse (VITRINES)&#10;Время: часы → минуты/секунды" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;" parent="cloud" vertex="1">
+                    <mxGeometry x="1400" y="190" width="280" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="scenario2" value="🔄 Независимое развитие&#10;Финтех и AI домены изолированы&#10;Event Bus для слабой связанности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;" parent="cloud" vertex="1">
+                    <mxGeometry x="1400" y="340" width="280" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="scenario3" value="📈 Масштабирование для новых бизнесов&#10;Легко добавлять новые домены&#10;Стандартизированная интеграция через Event Bus" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;" parent="cloud" vertex="1">
+                    <mxGeometry x="1400" y="500" width="280" height="100" as="geometry"/>
+                </mxCell>
+                
+                <!-- Highlight connections for scenario 1 -->
+                <mxCell id="sc1_line1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;strokeWidth=3;dashed=1;dashPattern=8 8;endArrow=none;" parent="cloud" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200" y="105" as="sourcePoint"/>
+                        <mxPoint x="200" y="235" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="sc1_line2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;strokeWidth=3;dashed=1;dashPattern=8 8;endArrow=none;" parent="cloud" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="235" as="sourcePoint"/>
+                        <mxPoint x="560" y="235" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="sc1_line3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;strokeWidth=3;dashed=1;dashPattern=8 8;endArrow=none;" parent="cloud" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="280" as="sourcePoint"/>
+                        <mxPoint x="1080" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
