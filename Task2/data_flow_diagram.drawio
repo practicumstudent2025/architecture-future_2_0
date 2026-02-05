@@ -1,102 +1,97 @@
-<mxfile host="app.diagrams.net">
-  <diagram id="dfd" name="Data Flow Diagram - Future 2.0">
-    <mxGraphModel dx="1660" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        
-        <mxCell id="ext_clinic" value="Клиники" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="40" y="200" width="120" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="ext_fintech" value="Финтех-сервисы" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="120" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="ext_ai" value="ИИ-сервисы" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="40" y="600" width="120" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="ext_corp" value="Головной офис" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="40" y="800" width="120" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="ext_biz" value="Бизнес-пользователи" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1600" y="400" width="120" height="80" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="proc_medical" value="Медицинский домен&#xa;Обработка данных клиник" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="240" y="180" width="200" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="proc_fintech" value="Финтех домен&#xa;Банковские операции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="240" y="380" width="200" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="proc_ai" value="AI домен&#xa;Обработка медицинских данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="240" y="580" width="200" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="proc_corp" value="Корпоративный домен&#xa;HR, инвентаризация, отчётность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="240" y="780" width="200" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="proc_analytics" value="Аналитический домен&#xa;Витрина данных, BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1200" y="400" width="200" height="120" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="store_event_bus" value="Event Bus" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="520" y="400" width="120" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="store_lakehouse" value="Data Lakehouse&#xa;RAW/CURATED/VITRINES" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="720" y="400" width="160" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="store_medical" value="Медицинские данные&#xa;(изолированы)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="520" y="180" width="120" height="80" as="geometry"/>
-        </mxCell>
-        <mxCell id="store_fintech" value="Финансовые данные" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="520" y="380" width="120" height="80" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="flow1" value="Данные клиник" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="ext_clinic" target="proc_medical">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow2" value="Финансовые транзакции" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="ext_fintech" target="proc_fintech">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow3" value="Запросы на анализ" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="ext_ai" target="proc_ai">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow4" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="ext_corp" target="proc_corp">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow5" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="proc_medical" target="store_medical">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow6" value="События клиник" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="proc_medical" target="store_event_bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow7" value="Финансовые данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="proc_fintech" target="store_fintech">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow8" value="События транзакций" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="proc_fintech" target="store_event_bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow9" value="Медицинские данные (для анализа)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="store_medical" target="proc_ai">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow10" value="Агрегированные метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" edge="1" parent="1" source="proc_ai" target="store_event_bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow11" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="proc_corp" target="store_event_bus">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow12" value="События (RAW)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="store_event_bus" target="store_lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow13" value="Витрины доменов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="store_fintech" target="store_lakehouse">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow14" value="Агрегированные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="store_lakehouse" target="proc_analytics">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="flow15" value="Отчёты и дашборды" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" edge="1" parent="1" source="proc_analytics" target="ext_biz">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="dfd" name="Data Flow Diagram - Future 2.0">
+        <mxGraphModel dx="2588" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="ext_clinic" value="Клиники" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-100" y="200" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_fintech" value="Финтех-сервисы" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-100" y="400" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_ai" value="ИИ-сервисы" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-100" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_corp" value="Головной офис" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-100" y="800" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_biz" value="Бизнес-пользователи" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1600" y="400" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="proc_medical" value="Медицинский домен&#10;Обработка данных клиник" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="180" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="proc_fintech" value="Финтех домен&#10;Банковские операции" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="380" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="proc_ai" value="AI домен&#10;Обработка медицинских данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="580" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="proc_corp" value="Корпоративный домен&#10;HR, инвентаризация, отчётность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="780" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="proc_analytics" value="Аналитический домен&#10;Витрина данных, BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="400" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="store_event_bus" value="Event Bus" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="400" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="store_lakehouse" value="Data Lakehouse&#10;RAW/CURATED/VITRINES" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="400" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="store_medical" value="Медицинские данные&#10;(изолированы)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="180" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="store_fintech" value="Финансовые данные" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow1" value="Данные клиник" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_clinic" target="proc_medical" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow2" value="Финансовые транзакции" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_fintech" target="proc_fintech" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow3" value="Запросы на анализ" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_ai" target="proc_ai" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow4" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_corp" target="proc_corp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow5" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_medical" target="store_medical" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow6" value="События клиник" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_medical" target="store_event_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow7" value="Финансовые данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_fintech" target="store_fintech" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow8" value="События транзакций" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_fintech" target="store_event_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow9" value="Медицинские данные (для анализа)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_medical" target="proc_ai" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow10" value="Агрегированные метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_ai" target="store_event_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow11" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_corp" target="store_event_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow12" value="События (RAW)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_event_bus" target="store_lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow13" value="Витрины доменов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_fintech" target="store_lakehouse" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow14" value="Агрегированные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_lakehouse" target="proc_analytics" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow15" value="Отчёты и дашборды" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_analytics" target="ext_biz" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
