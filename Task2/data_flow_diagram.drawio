@@ -72,7 +72,7 @@
                 <mxCell id="flow8" value="События транзакций" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_fintech" target="store_event_bus" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow9" value="Медицинские данные (для анализа)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="store_medical" target="proc_ai" edge="1">
+                <mxCell id="flow9" value="Медицинские данные &lt;br&gt;(для анализа)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="store_medical" target="proc_ai" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="960" y="350"/>
@@ -80,19 +80,23 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="flow10" value="Агрегированные метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_ai" target="store_event_bus" edge="1">
+                <mxCell id="flow10" value="Агрегированные &lt;br&gt;метрики" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;strokeWidth=2;dashed=1;" parent="1" source="proc_ai" target="store_event_bus" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow11" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;entryX=0.855;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;" parent="1" source="proc_corp" target="store_event_bus" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="flow11" value="Корпоративные &lt;br&gt;данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="proc_corp" target="store_event_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="flow12" value="События (RAW)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_event_bus" target="store_lakehouse" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow13" value="Витрины доменов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_fintech" target="store_lakehouse" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="flow13" value="Витрины &lt;br&gt;доменов" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_fintech" target="store_lakehouse" edge="1">
+                    <mxGeometry x="0.3571" y="-20" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="flow14" value="Агрегированные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_lakehouse" target="proc_analytics" edge="1">
+                <mxCell id="flow14" value="Агрегированные &lt;br&gt;данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="store_lakehouse" target="proc_analytics" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="flow15" value="Отчёты и дашборды" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_analytics" target="ext_biz" edge="1">
