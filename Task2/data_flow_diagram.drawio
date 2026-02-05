@@ -8,13 +8,13 @@
                     <mxGeometry x="-100" y="200" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="ext_fintech" value="Финтех-сервисы" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="-100" y="400" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="-150" y="400" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="ext_ai" value="ИИ-сервисы" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="-100" y="600" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="-150" y="600" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="ext_corp" value="Головной офис" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="-100" y="800" width="120" height="80" as="geometry"/>
+                    <mxGeometry x="-150" y="800" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="ext_biz" value="Бизнес-пользователи" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="1600" y="400" width="120" height="80" as="geometry"/>
@@ -26,10 +26,10 @@
                     <mxGeometry x="130" y="380" width="200" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc_ai" value="AI домен&#10;Обработка медицинских данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="580" width="200" height="120" as="geometry"/>
+                    <mxGeometry x="110" y="580" width="200" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc_corp" value="Корпоративный домен&#10;HR, инвентаризация, отчётность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="780" width="200" height="120" as="geometry"/>
+                    <mxGeometry x="100" y="780" width="200" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="proc_analytics" value="Аналитический домен&#10;Витрина данных, BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="1200" y="400" width="200" height="120" as="geometry"/>
@@ -55,7 +55,7 @@
                 <mxCell id="flow3" value="Запросы на анализ" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_ai" target="proc_ai" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="flow4" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_corp" target="proc_corp" edge="1">
+                <mxCell id="flow4" value="Корпоративные &lt;br&gt;данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="ext_corp" target="proc_corp" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="flow5" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;rounded=1;" parent="1" source="proc_medical" target="store_medical" edge="1">
