@@ -51,16 +51,36 @@
         </mxCell>
 
         <mxCell id="flow1" value="Данные клиник" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="ext_clinic" target="proc_medical">
-          <mxGeometry relative="1" as="geometry"/>
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="240"/>
+              <mxPoint x="100" y="240"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="flow2" value="Финансовые транзакции" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="ext_fintech" target="proc_fintech">
-          <mxGeometry relative="1" as="geometry"/>
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="440"/>
+              <mxPoint x="100" y="440"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="flow3" value="Запросы на анализ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="ext_ai" target="proc_ai">
-          <mxGeometry relative="1" as="geometry"/>
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="640"/>
+              <mxPoint x="100" y="640"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="flow4" value="Корпоративные данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="ext_corp" target="proc_corp">
-          <mxGeometry relative="1" as="geometry"/>
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="840"/>
+              <mxPoint x="100" y="840"/>
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="flow5" value="Медицинские данные" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" edge="1" parent="1" source="proc_medical" target="store_medical">
           <mxGeometry relative="1" as="geometry"/>
