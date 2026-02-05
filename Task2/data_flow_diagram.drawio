@@ -34,11 +34,11 @@
                 <mxCell id="proc_analytics" value="Аналитический домен&#10;Витрина данных, BI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="1120" y="400" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="store_event_bus" value="Event Bus" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                <mxCell id="store_event_bus" value="Event Bus&#10;Интеграция событий" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
                     <mxGeometry x="520" y="400" width="120" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="store_lakehouse" value="Data Lakehouse&#10;RAW/CURATED/VITRINES" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="720" y="400" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="760" y="480" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="store_medical" value="Медицинские данные&#10;(изолированы)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="730" y="310" width="120" height="80" as="geometry"/>
