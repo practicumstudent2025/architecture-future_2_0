@@ -203,7 +203,7 @@ resource "yandex_compute_instance" "data_lakehouse" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 50
+      size     = 20
     }
   }
 
@@ -235,7 +235,7 @@ resource "yandex_compute_instance" "event_bus" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 50
+      size     = 20
     }
   }
 
@@ -263,7 +263,7 @@ resource "yandex_compute_instance" "data_catalog" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 30
+      size     = 20
     }
   }
 
@@ -291,7 +291,7 @@ resource "yandex_compute_instance" "fintech" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 30
+      size     = 20
     }
   }
 
@@ -323,7 +323,7 @@ resource "yandex_compute_instance" "ai" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 30
+      size     = 20
     }
   }
 
@@ -355,7 +355,7 @@ resource "yandex_compute_instance" "bi_portal" {
   boot_disk {
     initialize_params {
       image_id = var.image_id
-      size     = 30
+      size     = 20
     }
   }
 
