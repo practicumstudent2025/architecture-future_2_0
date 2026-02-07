@@ -41,13 +41,13 @@
                     <mxGeometry x="790" y="740" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="sg_private" value="Security Group&#10;Private&#10;(Terraform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="1720" y="900" width="150" height="80" as="geometry"/>
+                    <mxGeometry x="1680" y="900" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="bastion" value="Bastion Host VM&#10;2 cores, 4 GB&#10;(Terraform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="40" y="630" width="180" height="100" as="geometry"/>
+                    <mxGeometry x="-170" y="780" width="180" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="bi_portal_vm" value="BI Portal VM&#10;4 cores, 16 GB&#10;(Terraform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="40" y="770" width="180" height="100" as="geometry"/>
+                    <mxGeometry x="50" y="780" width="180" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="edge_public_bastion" value="в подсети" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1" source="bastion" target="public_subnet">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -74,7 +74,7 @@
                     <mxGeometry x="1240" y="890" width="180" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="catalog_vm" value="Data Catalog VM&#10;4 cores, 16 GB&#10;(Terraform)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="1490" y="890" width="180" height="100" as="geometry"/>
+                    <mxGeometry x="1460" y="890" width="180" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="disk_lakehouse" value="Data Lakehouse Disk&#10;500 GB SSD&#10;(Terraform)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="1070" y="880" width="120" height="100" as="geometry"/>
@@ -89,13 +89,13 @@
                     <mxGeometry x="40" y="1050" width="1800" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="manual_kafka" value="Kafka Installation&#10;• Kafka brokers&#10;• Zookeeper&#10;• Topics configuration&#10;• Connectors&#10;(Manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="1000" y="1110" width="180" height="140" as="geometry"/>
+                    <mxGeometry x="1240" y="1120" width="180" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="manual_catalog" value="Data Catalog Setup&#10;• DataHub installation&#10;• Metadata configuration&#10;• Lineage setup&#10;• Search indexing&#10;(Manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="1000" y="1270" width="180" height="140" as="geometry"/>
+                    <mxGeometry x="1460" y="1120" width="180" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="manual_bi" value="BI Portal Setup&#10;• Self-service portal&#10;• Semantic Layer&#10;• Dashboard templates&#10;(Manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=11" parent="1" vertex="1">
-                    <mxGeometry x="40" y="1110" width="180" height="120" as="geometry"/>
+                    <mxGeometry x="50" y="1110" width="180" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="manual_apps" value="Application Configuration&#10;• IAM/SSO integration&#10;• Monitoring &amp; Logging&#10;• Domain apps (Fintech, AI)&#10;• Data Lakehouse setup&#10;• ETL/ELT pipelines&#10;(Manual)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;dashed=1;fontSize=11" parent="1" vertex="1">
                     <mxGeometry x="280" y="1110" width="200" height="160" as="geometry"/>
@@ -174,6 +174,64 @@
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1090" y="830" as="sourcePoint"/>
                         <mxPoint x="1140" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Security Group Private соединения -->
+                <!-- VPC Network → Security Group Private -->
+                <mxCell id="edge_vpc_sg_private" value="входит в" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1" source="vpc" target="sg_private">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1840" y="170" as="sourcePoint"/>
+                        <mxPoint x="1890" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Приватные подсети → Security Group Private -->
+                <mxCell id="edge_fintech_subnet_sg" value="использует" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="fintech_subnet" target="sg_private">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600" y="550" as="sourcePoint"/>
+                        <mxPoint x="650" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_ai_subnet_sg" value="использует" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="ai_subnet" target="sg_private">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1000" y="550" as="sourcePoint"/>
+                        <mxPoint x="1050" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_medical_subnet_sg" value="использует" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="medical_subnet" target="sg_private">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1390" y="550" as="sourcePoint"/>
+                        <mxPoint x="1440" y="500" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <!-- Security Group Private → VM -->
+                <mxCell id="edge_sg_private_fintech_vm" value="применяется к" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="sg_private" target="fintech_vm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" y="940" as="sourcePoint"/>
+                        <mxPoint x="1730" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_sg_private_ai_vm" value="применяется к" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="sg_private" target="ai_vm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" y="940" as="sourcePoint"/>
+                        <mxPoint x="1730" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_sg_private_lakehouse_vm" value="применяется к" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="sg_private" target="data_lakehouse_vm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" y="940" as="sourcePoint"/>
+                        <mxPoint x="1730" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_sg_private_kafka_vm" value="применяется к" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="sg_private" target="kafka_vm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" y="940" as="sourcePoint"/>
+                        <mxPoint x="1730" y="890" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_sg_private_catalog_vm" value="применяется к" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="sg_private" target="catalog_vm">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1680" y="940" as="sourcePoint"/>
+                        <mxPoint x="1730" y="890" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="edge_nat_internet" value="доступ в" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#d6b656;" edge="1" parent="1" source="nat" target="internet">
