@@ -1,0 +1,6 @@
+# Tech Radar build artifacts
+Task3/tech_radar/node_modules/
+Task3/tech_radar/.techradar/
+Task3/tech_radar/build/
+Task3/tech_radar/.next/
+Task3/tech_radar/package-lock.json

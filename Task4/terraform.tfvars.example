@@ -1,0 +1,35 @@
+# Пример файла terraform.tfvars
+# Скопируйте этот файл в terraform.tfvars и заполните реальными значениями
+
+yandex_token = "your-oauth-token-here"
+cloud_id     = "your-cloud-id-here"
+folder_id    = "your-folder-id-here"
+zone         = "ru-central1-a"
+
+# SSH ключ
+ssh_public_key_path = "~/.ssh/id_rsa.pub"
+
+# Ресурсы VM (можно изменить при необходимости)
+data_lakehouse_cores = 8
+data_lakehouse_memory = 32
+
+kafka_cores  = 4
+kafka_memory = 16
+
+catalog_cores  = 4
+catalog_memory = 16
+
+fintech_cores  = 4
+fintech_memory = 16
+
+ai_cores  = 8
+ai_memory = 32
+
+bi_cores  = 4
+bi_memory = 16
+
+# Диски
+data_disk_type  = "network-ssd"
+data_disk_size  = 500
+fintech_disk_size = 200
+ai_disk_size    = 300
