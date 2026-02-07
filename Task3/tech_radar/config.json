@@ -2,7 +2,7 @@
     "basePath": "/",
     "baseUrl": "",
     "editUrl": "",
-    "logoFile": "logo.svg",
+    "logoFile": "",
     "jsFile": "",
     "toggles": {
       "showChart": true,
